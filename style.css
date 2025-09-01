@@ -251,3 +251,22 @@ footer {
   font-size: 0.9em;
   color: #7f8c8d;
 }
+
+/* 
+  Responsividade
+  - Ajustes para telas menores, como celulares.
+*/
+@media (max-width: 600px) {
+  nav ul li {
+    margin: 5px;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  main h1, main h2 {
+    font-size: 1.5em;
+  }
+}
