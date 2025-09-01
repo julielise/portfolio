@@ -1,0 +1,238 @@
+/* 
+  CSS Reset e Estilos Globais
+  - Garante uma base consistente em todos os navegadores.
+  - Define a fonte padrão e as cores para um visual moderno.
+*/
+:root {
+  --primary-color: #2c3e50; /* Azul escuro/cinza para texto */
+  --secondary-color: #3498db; /* Azul para links e destaques */
+  --background-color: #ecf0f1; /* Cinza muito claro para o fundo */
+  --surface-color: #ffffff; /* Branco para áreas de conteúdo */
+  --border-color: #bdc3c7; /* Cinza claro para bordas */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 
+  Navegação
+  - Menu fixo no topo para fácil acesso em todas as páginas.
+  - O link da página ativa é destacado.
+*/
+header {
+  background-color: var(--surface-color);
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+/* Destaca o link da página atual */
+nav ul li a.active {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 5px;
+}
+
+/* 
+  Estilos de Conteúdo Principal
+  - Títulos, parágrafos e seções.
+*/
+main h1, main h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+main p {
+  margin-bottom: 15px;
+}
+
+main a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* 
+  Estilos da Página Sobre Mim
+  - Container para a foto de perfil.
+*/
+.profile-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+  Seção de Formação
+  - Estiliza a lista de formação e idiomas.
+*/
+.education-item, .language-item {
+  margin-bottom: 20px;
+}
+
+.education-item h3, .language-item h3 {
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.education-item p, .language-item p {
+  margin: 0;
+  color: #7f8c8d; /* Cinza mais suave para detalhes */
+}
+
+/* 
+  Seção do Portfólio
+  - Layout em grid para os projetos.
+  - Efeito de "card" para cada item do portfólio.
+*/
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.card p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+/* 
+  Página de Contato
+  - Estilos para o formulário.
+*/
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.contact-form button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9; /* Um tom mais escuro de azul */
+}
+
+.contact-info {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* 
+  Rodapé
+  - Simples e centralizado.
+*/
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}

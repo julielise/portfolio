@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juli Elise Leandro - Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação Principal -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <div class="container">
+        <main>
+            <h1>Entre em Contato</h1>
+            <!-- Por orientação do prof, nao estou utilizando frames, entao para nao deixar o formulario sem ação, utilizei o action='mailto:' que abre o cliente de e-mail padrão do usuário -->
+            <form class="contact-form" action="mailto:julieliseleandro@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div class="contact-info">
+                <p>Ou se preferir, me envie um email diretamente: <a href="mailto:julieliseleandro@gmail.com">julieliseleandro@gmail.com</a></p>
+                <p>Você também pode me encontrar no LinkedIn: <a href="https://br.linkedin.com/in/juli-elise-78b20536a" target="_blank">Juli Elise</a></p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Juli Elise Leandro. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
