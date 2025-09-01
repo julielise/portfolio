@@ -226,6 +226,14 @@ main a:hover {
 }
 
 /* 
+  Seção de Competências e Projetos
+  - Estiliza as seções de competências e projetos.
+*/
+.competencias, .projetos {
+  margin-bottom: 40px;
+}
+
+/* 
   Rodapé
   - Simples e centralizado.
 */
